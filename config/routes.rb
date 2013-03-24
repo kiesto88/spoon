@@ -1,9 +1,12 @@
 Spoon::Application.routes.draw do
+  
   resources :users
-
-
   resources :rings
 
+  root to: 'static_pages#home'
+  
+  match '/faq',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

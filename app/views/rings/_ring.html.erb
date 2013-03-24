@@ -1,0 +1,9 @@
+<li class="span3">
+  <div class="spoon_thumbnail">
+    <p><%= link_to(image_tag(ring.image), ring) %></p>
+    <p><%= ring.name %></p>
+    <p><%= ring.description %></p>
+    <p><%= link_to 'Edit', edit_ring_path(ring) %></p>
+    <p><%= link_to 'Destroy', ring, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+</li>

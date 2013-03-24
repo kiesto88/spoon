@@ -1,29 +1,9 @@
-<h1>Listing rings</h1>
+<h1>Listing Rings (<%= @rings.size %>)</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Image</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @rings.each do |ring| %>
-  <tr>
-    <td><%= ring.name %></td>
-    <td><%= ring.description %></td>
-    <td><%= ring.image %></td>
-    <td><%= ring.category %></td>
-    <td><%= link_to 'Show', ring %></td>
-    <td><%= link_to 'Edit', edit_ring_path(ring) %></td>
-    <td><%= link_to 'Destroy', ring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<div id="ring-wrapper">
+  <ul class="thumbnails">
+    <%= render @rings %>
+  </ul>
+</div>
 
 <%= link_to 'New Ring', new_ring_path %>
