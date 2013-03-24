@@ -1,4 +1,7 @@
 Spoon::Application.routes.draw do
+  resources :users
+
+
   resources :rings
 
 
