@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ring.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @ring.description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @ring.image %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @ring.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_ring_path(@ring) %> |
+<%= link_to 'Back', rings_path %>
